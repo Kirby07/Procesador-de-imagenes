@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/main.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tu imagen está lista</h1>
+    <div class="text-center mt-3">
+        {% for foto in list_photos %}
+            <div class="photo-container">
+                <p>Foto: {{ foto }}</p>
+                <br />
+                <img src="{{ archivo_path }}{{ foto }}" alt="{{ foto }}">
+                <br />
+                <br />
+                <a href="{{ url_for('descargar_archivo', nombreFoto=foto) }}" class="btn" >Descargar imagen</a>
+                <br />
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

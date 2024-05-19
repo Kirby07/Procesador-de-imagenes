@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+</head>
+<body>
+    <h2>Upload Image</h2>
+    <form action="http://localhost:5000/upload" method="POST" enctype="multipart/form-data">
+        <label for="file">Select image to upload:</label>
+        <input type="file" id="file" name="file" multiple />
+        <button onclick="myFunction()" type="submit">Upload image</button>
+        <script>
+        function myFunction() {
+            alert('Imagen subida, procesando');
+        }
+        </script>
+    </form>
+</body>
+</html>
